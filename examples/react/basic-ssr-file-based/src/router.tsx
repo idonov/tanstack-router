@@ -1,4 +1,5 @@
 import { createRouter as createReactRouter } from '@tanstack/react-router'
+import SuperJSON from 'superjson'
 
 import { routeTree } from './routeTree.gen'
 
@@ -9,6 +10,7 @@ export function createRouter() {
       head: '',
     },
     defaultPreload: 'intent',
+    transformer: SuperJSON,
   })
 }
 
